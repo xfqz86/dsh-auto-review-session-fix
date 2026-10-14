@@ -1,0 +1,7 @@
+# auto-review 评审补 sessionId 补丁（标准 cordis.patch 模式）。
+# 安装：dsh plugin --profile web add "link:<本目录>"，重启 dsh 生效。
+# profile 补丁层加载在 auto-review bundle 之后，本插件的 prepend 监听
+# 自然排在评审监听之前，无需额外排序配置。
+- insert:
+    - id: auto-review-session-fix
+      name: 'dsh-auto-review-session-fix'

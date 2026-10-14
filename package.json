@@ -1,0 +1,36 @@
+{
+  "name": "dsh-auto-review-session-fix",
+  "version": "0.1.0",
+  "description": "DSH host patch: backfill sessionId for auto-review reviewer calls so opencode-go gateway routing (x-opencode-session) works. Pure JS, no build.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "packageManager": "pnpm@11.7.0",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "test": "node test/smoke.mjs"
+  }
+}
